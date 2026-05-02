@@ -89,7 +89,7 @@ def load_liveeval_df():
     try:
         client = get_client()
         sheet = client.open_by_key(LIVEEVAL_SHEET_ID)
-        worksheet = sheet.sheet1  # first tab of the live eval sheet
+        worksheet = sheet.worksheet("May 2026")  # first tab of the live eval sheet
         data = worksheet.get_all_values()
         headers = data[1]
         rows = data[2:]
