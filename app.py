@@ -188,6 +188,10 @@ def load_sessions_df():
 
 
 # ── ROUTES ──
+@app.route("/ping")
+def ping():
+    return "ok", 200
+    
 @app.route("/")
 def home():
     df  = load_df()
